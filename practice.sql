@@ -1,0 +1,13 @@
+-- Active: 1689142396029@@127.0.0.1@3306@tweets
+-- -- insert into employee(first_name,last_name,age,current_status) VALUES('abhi','anand',21,'hi this is abhi');
+
+--   using primary key and auto increment 
+-- create table employees(
+--     id int AUTO_INCREMENT,
+--     last_name text not NULL,
+--     first_name text not NULL,
+--     middle_name text,
+--     age int,
+--     current_status VARCHAR(100) not NULL DEFAULT 'employed',
+--     PRIMARY KEY(id)
+-- );

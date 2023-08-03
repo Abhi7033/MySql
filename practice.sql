@@ -385,22 +385,56 @@
 -- GROUP BY released_year;
 
 
-AGGREGATE EXERCISE
-SELECT COUNT(*) FROM books;
-SELECT released_year, COUNT(*) 
-FROM books GROUP BY released_year;
-SELECT AVG(released_year) 
-FROM books GROUP BY author_lname, author_fname
-SELECT CONCAT(author_fname, ' ', author_lname) AS author, pages FROM books
-WHERE pages = (SELECT MAX(pages) FROM books);
-SELECT CONCAT(author_fname, ' ', author_lname) AS author, pages FROM books
-ORDER BY pages DESC LIMIT 1;
-SELECT 
-    released_year AS year,
-    COUNT(*) AS '# books',
-    AVG(pages) AS 'avg pages'
-FROM books
-GROUP BY released_year
-ORDER BY released_year;
+-- AGGREGATE EXERCISE
+-- SELECT COUNT(*) FROM books;
+-- SELECT released_year, COUNT(*) 
+-- FROM books GROUP BY released_year;
+-- SELECT AVG(released_year) 
+-- FROM books GROUP BY author_lname, author_fname
+-- SELECT CONCAT(author_fname, ' ', author_lname) AS author, pages FROM books
+-- WHERE pages = (SELECT MAX(pages) FROM books);
+-- SELECT CONCAT(author_fname, ' ', author_lname) AS author, pages FROM books
+-- ORDER BY pages DESC LIMIT 1;
+-- SELECT 
+--     released_year AS year,
+--     COUNT(*) AS '# books',
+--     AVG(pages) AS 'avg pages'
+-- FROM books
+-- GROUP BY released_year
+-- ORDER BY released_year;
 
 
+-- DATE AND TIME
+-- CREATE TABLE people (
+-- 	name VARCHAR(100),
+--     birthdate DATE,
+--     birthtime TIME,
+--     birthdt DATETIME
+-- );
+-- INSERT INTO people (name, birthdate, birthtime, birthdt)
+-- VALUES ('Elton', '2000-12-25', '11:00:00', '2000-12-25 11:00:00');
+-- INSERT INTO people (name, birthdate, birthtime, birthdt)
+-- VALUES ('Lulu', '1985-04-11', '9:45:10', '1985-04-11 9:45:10');
+-- INSERT INTO people (name, birthdate, birthtime, birthdt)
+-- VALUES ('Juan', '2020-08-15', '23:59:00', '2020-08-15 23:59:00');
+
+-- CURDATE & CURTIME & NOW
+-- SELECT CURTIME();
+-- SELECT CURDATE();
+-- SELECT NOW();
+-- INSERT INTO people (name, birthdate, birthtime, birthdt)
+-- VALUES ('Hazel', CURDATE(), CURTIME(), NOW());
+
+
+-- DATE FUNCTIONS
+-- SELECT 
+--     birthdate,
+--     DAY(birthdate),
+--     DAYOFWEEK(birthdate),
+--     DAYOFYEAR(birthdate)
+-- FROM people;
+-- SELECT 
+--     birthdate,
+--     MONTHNAME(birthdate),
+--     YEAR(birthdate)
+-- FROM people;

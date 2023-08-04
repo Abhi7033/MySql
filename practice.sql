@@ -438,3 +438,64 @@
 --     MONTHNAME(birthdate),
 --     YEAR(birthdate)
 -- FROM people;
+
+-- SELECT 
+--     birthtime,
+--     HOUR(birthtime),
+--     MINUTE(birthtime)
+-- FROM people;
+-- SELECT 
+--     birthdt,
+--     MONTH(birthdt),
+--     DAY(birthdt),
+--     HOUR(birthdt),
+--     MINUTE(birthdt)
+-- FROM people;
+
+-- FORMATTING DATE AND TIME
+-- SELECT birthdate, DATE_FORMAT(birthdate, '%a %b %D') FROM people;
+-- SELECT birthdt, DATE_FORMAT(birthdt, '%H:%i') FROM people;
+-- SELECT birthdt, DATE_FORMAT(birthdt, 'BORN ON: %r') FROM people;
+
+
+-- DEFAULT AND ON UPDATE TIMESTAMP
+-- CREATE TABLE captions (
+--   text VARCHAR(150),
+--   created_at TIMESTAMP default CURRENT_TIMESTAMP
+-- );
+-- CREATE TABLE captions2 (
+--   text VARCHAR(150),
+--   created_at TIMESTAMP default CURRENT_TIMESTAMP,
+--   updated_at TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+-- );
+
+
+-- DATATYPES EXERCISE
+-- CREATE TABLE inventory (
+--     item_name VARCHAR(100),
+--     price DECIMAL(8,2),
+--     quantity INT
+-- );
+  
+-- SELECT CURTIME();
+-- SELECT CURDATE();
+-- SELECT DAYOFWEEK(CURDATE());
+-- SELECT DAYOFWEEK(NOW());
+-- SELECT DATE_FORMAT(NOW(), '%w') + 1;
+-- SELECT DAYNAME(NOW());
+-- SELECT DATE_FORMAT(NOW(), '%W');
+-- SELECT DATE_FORMAT(CURDATE(), '%m/%d/%Y');
+-- SELECT DATE_FORMAT(NOW(), '%M %D at %h:%i');
+-- CREATE TABLE tweets(
+--     content VARCHAR(140),
+--     username VARCHAR(20),
+--     created_at TIMESTAMP DEFAULT NOW()
+-- );
+-- INSERT INTO tweets (content, username) VALUES('this is my first tweet', 'coltscat');
+-- SELECT * FROM tweets;
+-- INSERT INTO tweets (content, username) VALUES('this is my second tweet', 'coltscat');
+-- SELECT * FROM tweets;
+
+
+
+
